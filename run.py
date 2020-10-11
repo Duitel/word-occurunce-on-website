@@ -43,9 +43,9 @@ def count_word_occurunce_in_text(word: str, text: str) -> int:
     return count
 
 
-def count_character_of_word_occurunce_in_text(word: str, text: str):
+def count_character_of_word_occurunce_in_text(word: str, text: str) -> List[Tuple[str, int]]:
     """
-    Count the number of matches of words in the text. The word may occur as a substring.
+    Count the number of matches for each character of a word in the text.
 
     Parameters
     ----------
@@ -54,7 +54,7 @@ def count_character_of_word_occurunce_in_text(word: str, text: str):
 
     Returns
     -------
-    int, the number of occurunces of the word in the text
+    List[Tuple[str,int]], a list of tuple cotaining the character and the occurunce count for that character in the text
     """
     char_count = Counter(text)
     return [(char, char_count[char]) for char in word]
