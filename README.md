@@ -1,5 +1,5 @@
 # word-occurunce-on-website
-A script to count how many times a word (could have been) occured on a webpage.
+A script to count how many times a word or (sub)string (could have been) occured on a webpage.
 
 ## To run the script
 To run the script use your favorite terminal and type: 
@@ -47,4 +47,7 @@ step 5: count the letter occurunces & report the results
 	Thus the word could have occured for 144. This is an estimation since we neglected double characters in the word.
 Script ended succesfully
 ```
+ 
+ ## Run with shell script
+ It is also possible to use the shell script, `start_and_loop_run_script.sh`, to gather the parameters and run the python script `run.py`.
  
