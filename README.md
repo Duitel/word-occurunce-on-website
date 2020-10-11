@@ -8,4 +8,4 @@ python3.6 run.py -ws <URL> -w <WORD> -c <CASE_SENSITIVE>
 ```
 Replace `<URL>`, `<WORD` and `CASE_SENSITIVE` with the webpage url, the word to search for and whether or not to search with case sensitivity or not. 
 
-Possible values for `<CASE_SENSITIVE>` are `0`, `false`, `False` which are converted to `False` and `1`, `true`, `True` which are converted to True. All other values result in an error.
+Possible values for `<CASE_SENSITIVE>` are `0`, `false`, `False`, `no`, `n` which are converted to `False` and `1`, `true`, `True`, `yes`, `y` which are converted to True. All other values result in an error.
