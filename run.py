@@ -71,6 +71,7 @@ def main(url: str, word: str, case_sensitive: str) -> None:
     ----------
     url : str, the url of the website to look upon.
     word : str, the word to search for.
+    case_sensitive : str, whether or not to search case_sensitive
 
     Returns
     -------
@@ -82,7 +83,8 @@ def main(url: str, word: str, case_sensitive: str) -> None:
     print("Step 1")
     contents_text = get_webpage_contents(url=url)
     if not case_sensitive:
-        contents_text.lower()
+        contents_text = contents_text.lower()
+        word = word.lower()
     print(contents_text)
 
 
