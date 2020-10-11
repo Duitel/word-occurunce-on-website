@@ -83,8 +83,8 @@ def convert_case_sensitive_argument(case_sensitive: str) -> bool:
     """
     Convert the case-sensitive argument to True or False.
 
-    '0', 'false', 'False' are converted to False and '1', 'true', 'True' are converted to True. All other values result
-    in raising an error.
+    '0', 'false', 'False', 'no', 'n' are converted to False and '1', 'true', 'True', 'yes', 'y' are converted to True.
+    All other values result in raising an error.
 
     Parameters
     ----------
@@ -98,9 +98,13 @@ def convert_case_sensitive_argument(case_sensitive: str) -> bool:
         "0": False,
         "false": False,
         "False": False,
+        "no": False,
+        "n": False,
         "1": True,
         "true": True,
-        "True": True
+        "True": True,
+        "yes": True,
+        "y": True
     }
     return conversion_dict[case_sensitive]
 
@@ -169,7 +173,7 @@ if __name__ == "__main__":  # execute only if run as a script
     parser.add_argument("-ws", "--website", help="The website to look on")
     parser.add_argument("-w", "--word", help="The word to count")
     parser.add_argument("-c", "--case_sensitive",
-                        help="Should the search be performed case sensitive or not? [0,false,False,1,true,True]")
+                        help="Should the search be performed case sensitive or not? [0,false,False,no,n,1,true,True,yes,y]")
 
     args = parser.parse_args()
 
